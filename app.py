@@ -1,4 +1,8 @@
 from flask import Flask, request, jsonify
+import tensorflow as tf
+print(tf.test.is_built_with_cuda())  # Should return True
+print(tf.config.list_physical_devices('GPU'))  # Should list your GPU
+
 import numpy as np
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
